@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments/components :: html-head"></head>
+<body>
+<div th:insert="fragments/components :: navbar"></div>
+<b>Are you sure you want to delete Category?</b>
+
+<table class="table table-dark table-stripped">
+    <tr>
+        <td scope="row" th:text="${category.name}"></td>
+        <td scope="row" th:text="${category.icon}"></td>
+        <td>
+            <form action="#" th:action="@{/category/delete}" th:object="${category}" method="post">
+                <input type="hidden" th:field="${category.id}">
+                <p><input type="submit" value="Yes, Delete" /> </p>
+            </form>
+        </td>
+        <td><a th:href="@{'/category/all-categorys/' + ${category.id}}">No, Go Back</a></td>
+    </tr>
+</table>
+
+<div th:insert="fragments/components :: bootstrap-js"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments/components :: html-head"></head>
+<body>
+<div th:insert="fragments/components :: navbar"></div>
+<b>Edit Category</b>
+
+
+<h1>Category Form</h1>
+<form action="#" th:action="@{/category/edit}" th:object="${category}" method="post">
+    <input type="hidden" th:field="*{id}">
+    <p>Category Name: <input type="text" th:field="*{name}"/></p>
+    <p>Icon: <input type="text" th:field="*{icon}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+
+<div th:insert="fragments/components :: bootstrap-js"></div>
+</body>
+</html>

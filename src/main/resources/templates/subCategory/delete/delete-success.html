@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org">
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 <head th:insert="fragments/components :: html-head"></head>
 <body>
 <div th:insert="fragments/components :: navbar"></div>
-<h1>Result</h1>
-<p th:text="'category-name: ' + ${category.name}"></p>
-<p th:text="'icon: ' + ${category.icon}"></p>
+<div class="container">
+    <h1>Category Deleted</h1>
+</div>
+
 <div th:insert="fragments/components :: bootstrap-js"></div>
 </body>
 </html>

@@ -33,7 +33,7 @@ public class GoogleSheetOperation {
                 .build();
     }
 
-    public static List<List<Object>> getAll(EntitySpreadSheet entitySpreadSheet) throws IOException, GeneralSecurityException {
+    public static List<List<Object>> getAll(EntitySpreadSheet entitySpreadSheet) {
         logger.info("Reading from {}", entitySpreadSheet.getSheet());
         List<List<Object>> values = new ArrayList<>();
         try {
@@ -55,7 +55,11 @@ public class GoogleSheetOperation {
         return values;
     }
 
-    public static List<Object> getByRowNumber(EntitySpreadSheet entitySpreadSheet, Integer rowNum) throws IOException, GeneralSecurityException {
+    public static List<List<Object>> getByColumnNumber(EntitySpreadSheet entitySpreadSheet, Integer colNum) {
+        return getAll(entitySpreadSheet);
+    }
+
+    public static List<Object> getByRowNumber(EntitySpreadSheet entitySpreadSheet, Integer rowNum) {
         logger.info("Reading from {} for rowNum {}", entitySpreadSheet.getSheet(), rowNum);
         List<Object> result = new ArrayList<>();
         try {

@@ -2,10 +2,13 @@
 <html xmlns:th="https://www.thymeleaf.org">
 <head th:insert="fragments/components :: html-head"></head>
 <body>
+
 <div th:insert="fragments/components :: navbar"></div>
 <h1>Result</h1>
-<p th:text="'category-name: ' + ${category.name}"></p>
-<p th:text="'icon: ' + ${category.icon}"></p>
+<p th:text="'SubCategory-name: ' + ${subCategory.name}"></p>
+<p th:text="'Category: ' + ${subCategory.category}"></p>
+<p th:text="'Icon: ' + ${subCategory.icon}"></p>
+<a href="/subCategory/create-form">Submit another message</a>
 <div th:insert="fragments/components :: bootstrap-js"></div>
 </body>
 </html>
