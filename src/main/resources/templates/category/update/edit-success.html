@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head th:insert="fragments/components :: html-head"></head>
+<body>
+<div th:insert="fragments/components :: navbar"></div>
+<h1>Result</h1>
+<p th:text="'category-name: ' + ${category.name}"></p>
+<p th:text="'color: ' + ${category.color}"></p>
+<div th:insert="fragments/components :: bootstrap-js"></div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head th:insert="fragments/components :: html-head"></head>
+<body>
+<div th:insert="fragments/components :: navbar"></div>
+<h1>Result</h1>
+<p th:text="'account-name: ' + ${account.name}"></p>
+<p th:text="'color: ' + ${account.color}"></p>
+<div th:insert="fragments/components :: bootstrap-js"></div>
+</body>
+</html>

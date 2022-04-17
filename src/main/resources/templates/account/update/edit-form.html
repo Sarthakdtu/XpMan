@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments/components :: html-head"></head>
+<body>
+<div th:insert="fragments/components :: navbar"></div>
+<b>Edit Account</b>
+
+
+<h1>Form</h1>
+<form action="#" th:action="@{/account/edit}" th:object="${account}" method="post">
+    <input type="hidden" th:field="*{id}">
+    <p>Account Name: <input type="text" th:field="*{name}"/></p>
+    <p>Color: <input type="text" th:field="*{color}" /></p>
+    <p>Amount: <input type="text" th:field="*{amount}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+
+<div th:insert="fragments/components :: bootstrap-js"></div>
+</body>
+</html>

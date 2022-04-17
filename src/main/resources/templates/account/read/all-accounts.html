@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments/components :: html-head"></head>
+<body>
+
+<div th:insert="fragments/components :: navbar"></div>
+
+    <div class="container">
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Color</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Expenditure</th>
+            </tr>
+        </thead>
+
+        <tr scope="row" th:each="account: ${accounts}">
+            <td th:text="${account.id}"></td>
+            <td th:text="${account.name}"></td>
+            <td th:text="${account.color}"></td>
+            <td th:text="${account.amount}"></td>
+            <td th:text="${account.expenditure}"></td>
+            <td><a th:href="@{'/account/edit-form/' + ${account.id}}">edit</a></td>
+            <td><a th:href="@{'/account/delete-confirmation/' + ${account.id}}">delete</a></td>
+        </tr>
+
+    </table>
+
+    <div th:insert="fragments/components :: bootstrap-js"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments/components :: html-head"></head>
+<body>
+<div th:insert="fragments/components :: navbar"></div>
+<h3> 500 Internal Server Error </h3>
+<p th:text="${error}"></p>
+<div th:insert="fragments/components :: bootstrap-js"></div>
+</body>
+</html>
